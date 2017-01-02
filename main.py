@@ -27,7 +27,7 @@ game_data = [
     {'band': 'Black Sabbath', 
         'members': ['Ozzy Osbourne', 'Tommy Iommi', 'Bill Ward', 'Geezer Butler']},
     {'band': 'Rush', 
-        'members': ['Ozzy Osbourne', 'Tommy Iommi', 'Bill Ward', 'Geezer Butler']},
+        'members': ['Neil Peart', 'Geddy Lee', 'Alex Lifeson']},
 ]
 
 
@@ -44,8 +44,8 @@ def new_game():
 
 def next_round():
 
-    number = [randint(0, 3) for _ in range(3)]
-    record = game_date[number] 
+    number = randint(0, len(game_data) - 1)
+    record = game_data[number] 
 
     round_msg = render_template('round', members=record['members'])
 
