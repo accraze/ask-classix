@@ -1,0 +1,7 @@
+welcome: It's classic rock trivia time. I'm going to list the names of members in a band and you will tell me the band's name. Ready?
+
+round: Which band has the memebers {{ members|join(", ") }} ?
+
+win: Good job!
+
+lose: Sorry, that's the wrong answer, it should be {{ answer }}.
